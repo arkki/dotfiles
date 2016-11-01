@@ -1,0 +1,9 @@
+.DS_Store
+
+.config/fish/fishd.*
+.config/fish/fish_history
+
+*.log
+
+/.gitconfig
+vim/.vim/.netrwhist

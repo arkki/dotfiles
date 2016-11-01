@@ -1,0 +1,51 @@
+{
+    "aem_error": {
+        "title": "AEM error log",
+        "description": "AEM error log format",
+        "url": "",
+        "regex": {
+            "AEM_error": {
+                "pattern": "^(?<timestamp>\\d{2}\\.\\d{2}\\.\\d{4}\\s\\d{2}:\\d{2}:\\d{2})\\.\\d{3}\\s\\*(?<alert_level>\\w+)\\*\\s\\[(?<module>[\\w\\d\\s_:=\\-\\/\\.\\[\\]\\(\\)]+)\\]\\s(?<class>[\\w\\.\\-\\>\\<]+)\\s(?<body>.*)$"
+            }
+        },
+        "timestamp-format": ["%d.%m.%Y %H:%M:%S"],
+        "level-field": "alert_level",
+        "level": {
+            "info": "STATUS",
+            "error": "ERROR",
+            "warning": "WARN",
+            "debug": "DEBUG",
+            "info": "INFO"
+        },
+        "value": {
+            "function": {
+                "kind": "string",
+                "identifier": true
+            },
+            "alert_level": {
+                "kind": "string",
+                "identifier": true
+            },
+            "module": {
+                "kind": "string",
+                "identifier": true
+            },
+            "class": {
+                "kind": "string",
+                "identifier": true
+            },
+            "body": {
+                "kind": "string"
+            }
+        },
+        "sample": [{
+            "line": "12.09.2016 09:25:32.248 *INFO* [FelixStartLevel] org.apache.sling.javax.activation BundleEvent STARTING"
+        }, {
+            "line": "29.09.2016 15:05:24.124 *INFO* [sling-oak-observation-56] com.day.cq.tagging.impl.TagValidatingEventListener invalid/duplicated tags detected at /content/zurich-au/news/investment_insights/the-business-of-sharing-changing-face-of-transport/jcr:content/cq:tags modified by admin: 'news:investment-insights' => ''"
+        }, {
+            "line": "29.09.2016 15:18:52.278 *INFO* [aysnc-index-update-fulltext-async] org.apache.jackrabbit.oak.plugins.index.IndexUpdate /oak:index/lucene => Indexed 30000 nodes in 2.363 s ..."
+        }, {
+            "line": "29.09.2016 15:20:27.202 *INFO* [qtp1525838179-127] org.apache.jackrabbit.vault.packaging.impl.ZipVaultPackage Extracting zurich/aem6/zurich-web:zurich-web.ui.content:1.2.4"
+        }]
+    }
+}
