@@ -5,6 +5,8 @@ printf 'Creating dirs...'
 mkdir -p ~/.config/fish
 mkdir -p ~/.ssh/ids
 chmod 700 ~/.ssh
+
+touch ~/.gitconfig
 printf ' done!\n'
 
 # Creating dotfile symlinks to $HOME
