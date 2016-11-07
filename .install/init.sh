@@ -30,7 +30,7 @@ printf 'Done!\n\n'
 
 # Fisher plugins
 printf 'Installing fisher with plugins...\n'
-fish -c fisher
+fish -c fisher update
 
 # Install tmux-plugin-manager
 printf 'Installing tmux plugin-manager...\n'
