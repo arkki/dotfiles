@@ -1,7 +1,11 @@
 .DS_Store
 
-.config/fish/fishd.*
-.config/fish/fish_history
+fish/.config/fish/fishd.*
+fish/.config/fish/fish_history
+fish/.config/fish/conf.d/omf.fish
+
+fish/.config/fish/completions/docker-compose.fish
+fish/.config/fish/completions/docker.fish
 
 *.log
 
