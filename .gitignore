@@ -13,3 +13,4 @@ fish/.config/fish/completions/docker.fish
 vim/.vim/.netrwhist
 
 lnav/.lnav/*
+!lnav/.lnav/formats
