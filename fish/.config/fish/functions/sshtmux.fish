@@ -1,3 +1,3 @@
 function sshtmux
-	ssh -t $argv "bash -c \"tmux new -s base || tmux attach -t base\""
+	ssh -t $argv "bash -c \"tmux attach -t base || tmux new -s base\""
 end
