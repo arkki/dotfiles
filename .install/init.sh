@@ -17,10 +17,10 @@ printf ' done!\n\n'
 
 # GIT
 printf 'Setting up git variables...\n'
-printf 'Enter your git user.name: '
+printf 'Enter your global git user.name: '
 read -e GITUSERNAME
 
-printf 'Enter your git user.email: '
+printf 'Enter your global git user.email: '
 read -e GITUSEREMAIL
 
 git config --global user.name "$GITUSERNAME"
@@ -30,6 +30,7 @@ printf 'Done!\n\n'
 
 # Fisher plugins
 printf 'Installing fisher with plugins...\n'
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 fish -c fisher update
 
 # Install tmux-plugin-manager

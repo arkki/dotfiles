@@ -1,7 +1,11 @@
 "*":
   "atom-beautify":
-    general:
-      _analyticsUserId: "22dd53fc-11b9-40ce-a127-f5d47ffa089b"
+    executables:
+      autopep8:
+        path: "/usr/local/bin/autopep8"
+    general: {}
+    sql:
+      indent_size: 4
   core:
     ignoredNames: [
       ".git"
@@ -21,16 +25,18 @@
       "solarized-dark-syntax"
     ]
   editor:
-    fontSize: 16
     invisibles: {}
   "exception-reporting":
     userId: "ba59aac4-2b7c-c643-8ec0-0d0bc4003b96"
+  "linter-ui-default": {}
   minimap:
     plugins:
       "find-and-replace": true
       "find-and-replaceDecorationsZIndex": 0
       "git-diff": true
       "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
       pigments: true
       pigmentsDecorationsZIndex: 0
   "tool-bar":
