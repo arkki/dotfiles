@@ -15,10 +15,18 @@ abbr drmi 'docker rmi'
 abbr dv 'docker volume'
 abbr cls clear
 abbr laf 'ls -laFh'
-abbr idiff 'idea diff'
 abbr sourcetree 'open -a Sourcetree'
 abbr ga 'git add'
 abbr mux tmuxinator
 abbr iterm 'open -a Iterm'
 abbr devbox 'docker run -it --rm --name devbox --hostname devbox.localhost arkki/devbox /usr/bin/fish'
 abbr devbox-edit 'docker run -it --name devbox --hostname devbox-edit.localhost arkki/devbox /usr/bin/fish'
+
+abbr dcps 'docker-compose ps'
+abbr bef 'bundle exec fastlane'
+abbr dud 'du -h -d 1 | gsort -h | less'
+abbr dclogs 'docker-compose logs -f -t --no-color | lnav'
+abbr kc kubectl
+abbr mp multipass
+
+abbr kcns kubectl config set-context --current --namespace=

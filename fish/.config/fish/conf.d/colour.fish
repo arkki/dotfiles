@@ -13,3 +13,6 @@ set -x LESS_TERMCAP_se (printf "\e[0m")
 set -x LESS_TERMCAP_so (printf "\e[01;42;30m")    # Search highlight
 set -x LESS_TERMCAP_ue (printf "\e[0m")
 set -x LESS_TERMCAP_us (printf "\e[01;32m")
+
+set -x fish_pager_color_prefix cyan
+set -x fish_color_search_match \x2d\x2dbackground\x3dpurple
