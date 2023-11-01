@@ -42,3 +42,6 @@ printf 'Installing Oh-My-Fish with plugins..\n'
 mkdir -p ~/.temp
 git clone https://github.com/oh-my-fish/oh-my-fish.git ~/.temp/oh-my-fish
 ~/.temp/oh-my-fish/bin/install --offline
+
+# Neovim / NvChad custom
+ln -s ~/.dotfiles/nvim/custom ~/.config/nvim/lua/custom
