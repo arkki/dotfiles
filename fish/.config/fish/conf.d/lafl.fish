@@ -1,5 +1,4 @@
 function lafl
-
 	# Linux
         # ls --color=always -laFh | lessxfr $arvg;
 

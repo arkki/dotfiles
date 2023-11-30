@@ -30,3 +30,5 @@ abbr kc kubectl
 abbr mp multipass
 
 abbr kcns kubectl config set-context --current --namespace=
+
+abbr cargo-watch cargo watch -q -c -w src/ -x \'run -q\'

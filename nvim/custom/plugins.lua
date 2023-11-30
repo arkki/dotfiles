@@ -4,7 +4,6 @@ local overrides = require("custom.configs.overrides")
 local plugins = {
 
   -- Override plugin definition options
-
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -32,7 +31,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-  opts = overrides.mason
+    opts = overrides.mason
   },
 
   {
@@ -45,13 +44,21 @@ local plugins = {
     opts = overrides.nvimtree,
   },
 
-  -- Install a plugin
   {
     "max397574/better-escape.nvim",
     event = "InsertEnter",
     config = function()
       require("better_escape").setup()
     end,
+  },
+
+  {
+    "alexghergh/nvim-tmux-navigation",
+    lazy = false,
+    config = function()
+        require("nvim-tmux-navigation").setup()
+    end,
+
   },
 
   -- To make a plugin not be loaded

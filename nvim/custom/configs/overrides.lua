@@ -44,6 +44,7 @@ M.mason = {
 M.nvimtree = {
   git = {
     enable = true,
+    ignore = false
   },
 
   renderer = {
@@ -52,7 +53,10 @@ M.nvimtree = {
       show = {
         git = true,
       },
-    },
+    }, 
+ },
+  filters = {
+    dotfiles = false,
   },
 }
 
