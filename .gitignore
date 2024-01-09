@@ -16,3 +16,4 @@ lnav/.lnav/*
 !lnav/.lnav/formats
 
 tmux/.config/tmux/plugins
+alacritty/.config/alacritty/themes
