@@ -4,3 +4,7 @@
 # end
 
 # status --is-interactive; and source (jenv init -|psub)
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

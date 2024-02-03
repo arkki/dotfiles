@@ -6,7 +6,7 @@ set -e JAVA_HOME
 source "/usr/local/Cellar/jenv/0.5.6/libexec/completions/jenv.fish"
 
 # /usr/local/Cellar/jenv/0.5.6/libexec/bin/jenv
-jenv rehash 2>/dev/null
+# jenv rehash 2>/dev/null
 jenv refresh-plugins
 function jenv
   set command $argv[1]
