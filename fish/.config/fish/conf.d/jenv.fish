@@ -3,11 +3,11 @@ set -gx JENV_SHELL fish
 set -gx JENV_LOADED 1
 set -e JAVA_HOME
 
-source "/usr/local/Cellar/jenv/0.5.6/libexec/completions/jenv.fish"
+source "/usr/local/Cellar/jenv/0.5.7/libexec/completions/jenv.fish"
 
-# /usr/local/Cellar/jenv/0.5.6/libexec/bin/jenv
+# /usr/local/Cellar/jenv/0.5.7/libexec/bin/jenv
 # jenv rehash 2>/dev/null
-jenv refresh-plugins
+# jenv refresh-plugins
 function jenv
   set command $argv[1]
   set -e argv[1]

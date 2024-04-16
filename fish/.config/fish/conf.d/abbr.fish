@@ -21,6 +21,8 @@ abbr mux tmuxinator
 abbr iterm 'open -a Iterm'
 abbr devbox 'docker run -it --rm --name devbox --hostname devbox.localhost arkki/devbox /usr/bin/fish'
 abbr devbox-edit 'docker run -it --name devbox --hostname devbox-edit.localhost arkki/devbox /usr/bin/fish'
+abbr dexec 'docker exec -it -u root'
+
 
 abbr dcps 'docker-compose ps'
 abbr bef 'bundle exec fastlane'

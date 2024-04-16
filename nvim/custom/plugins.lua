@@ -20,12 +20,54 @@ local plugins = {
       require "custom.configs.lspconfig"
     end, -- Override to setup mason-lspconfig
   },
+
+  -- {
+  --   'rust-lang/rust.vim',
+  --   ft = "rust",
+  --   init = function()
+  --     vim.g.rustfmt_autosave = 1
+  --   end
+  -- },
+
   {
-    "rust-lang/rust.vim",
-    ft = "rust",
-    init = function()
-      vim.g.rustfmt_autosave = 1
-    end
+    'mrcjkb/rustaceanvim',
+    version = '^4', -- Recommended
+    ft = { 'rust' },
+  },
+
+  {
+    "max397574/better-escape.nvim",
+    event = "InsertEnter",
+    config = function()
+      require("better_escape").setup()
+    end,
+  },
+
+  {
+    "alexghergh/nvim-tmux-navigation",
+    lazy = false,
+    config = function()
+        require("nvim-tmux-navigation").setup({})
+    end,
+
+  },
+
+  {
+    'saecki/crates.nvim',
+    tag = 'stable',
+    event = { "BufRead Cargo.toml" },
+    config = function()
+        require('crates').setup({})
+    end,
+  },
+
+  {
+    "mhartington/formatter.nvim"
+  },
+
+  {
+    "github/copilot.vim",
+    lazy = false
   },
 
   -- override plugin configs
@@ -44,21 +86,10 @@ local plugins = {
     opts = overrides.nvimtree,
   },
 
-  {
-    "max397574/better-escape.nvim",
-    event = "InsertEnter",
-    config = function()
-      require("better_escape").setup()
-    end,
-  },
 
   {
-    "alexghergh/nvim-tmux-navigation",
-    lazy = false,
-    config = function()
-        require("nvim-tmux-navigation").setup({})
-    end,
-
+    "hrsh7th/nvim-cmp",
+    opts = overrides.cmp,
   },
 
   -- To make a plugin not be loaded

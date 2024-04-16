@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Create dirs if they don't exist
 printf 'Creating dirs...'
@@ -36,6 +36,7 @@ fish -c fisher update
 # Install tmux-plugin-manager
 printf 'Installing tmux plugin-manager...\n'
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tic -x ~/.dotfiles/.install/tmux-256color.terminfo
 
 # Oh-My-Fish w/ lambda theme
 printf 'Installing Oh-My-Fish with plugins..\n'

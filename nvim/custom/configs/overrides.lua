@@ -53,10 +53,24 @@ M.nvimtree = {
       show = {
         git = true,
       },
-    }, 
+    },
  },
   filters = {
     dotfiles = false,
+  },
+}
+
+M.cmp = {
+-- vim.opt.completeopt = "menu,menuone,noselect,noinsert"
+  -- preselect = cmp.PreselectMode.None,
+  sources = {
+     { name = "copilot" },
+     { name = "nvim_lsp" },
+     { name = "luasnip" },
+     { name = "buffer" },
+     { name = "nvim_lua" },
+     { name = "path" },
+     { name = "crates" },
   },
 }
 

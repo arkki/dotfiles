@@ -6,12 +6,19 @@ local util = require "lspconfig/util"
 -- if you just want default config for the servers then put them in a table
 local servers = { "html", "cssls", "tsserver", "clangd" }
 
-lspconfig.rust_analyzer.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = {"rust"},
-  root_dir = util.root_pattern("Cargo.toml")
-})
+-- lspconfig.rust_analyzer.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--   filetypes = {"rust"},
+--   root_dir = util.root_pattern("Cargo.toml"),
+--   settings = {
+--     ['rust-analyzer'] = {
+--       cargo = {
+--         allFeatures = true,
+--       },
+--     },
+--   },
+-- }
 
 lspconfig.gopls.setup {
   on_attach = on_attach,

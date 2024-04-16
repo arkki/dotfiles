@@ -17,7 +17,7 @@ function cdup --description 'CD up until given folder'
 		if [ $folder != $target_folder ]
 			set folder_count (math $folder_count + 1);
 		else
-            set folder_arr $folder_arr[$folder_count..-1]
+      set folder_arr $folder_arr[$folder_count..-1]
 			cd (string join '/' $folder_arr[-1..1]);
 			return
 		end

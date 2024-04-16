@@ -10,3 +10,7 @@
 vim.opt.colorcolumn = "120"
 
 vim.wo.relativenumber = true
+
+require("custom.configs.rust")
+
+require("custom.configs.copilot")
