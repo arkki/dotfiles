@@ -1,0 +1,48 @@
+{
+    "aem_access": {
+        "title": "AEM access log",
+        "description": "AEM access log format",
+        "url": "",
+        "regex": {
+            "aem_access": {
+                "pattern": "^(?<ip>\\d+\\.\\d+\\.\\d+\\.\\d+)\\s-\\s(?<user>.+)\\s(?<timestamp>\\d{2}\\/\\w{3}\\/\\d{4}:\\d{2}:\\d{2}:\\d{2})\\s.+\\s\"(?<request>.*)\"\\s(?<http_code>\\d+)\\s(?<time>.+)\\s\"(?<url>.*)\"\\s\"(?<agent>.*)\"$"
+            }
+        },
+        "timestamp-format": ["%d/%b/%Y:%H:%M:%S"],
+        "value": {
+            "ip": {
+                "kind": "string",
+                "identifier": true
+            },
+            "user": {
+                "kind": "string",
+                "identifier": true
+            },
+            "request": {
+                "kind": "string",
+                "identifier": true
+            },
+            "http_code": {
+                "kind": "integer",
+                "identifier": true
+            },
+            "time": {
+                "kind": "integer",
+                "identifier": true
+            },
+            "url": {
+                "kind": "string",
+                "identifier": true
+            },
+            "agent": {
+                "kind": "string",
+                "identifier": true
+            }
+        },
+        "sample": [{
+            "line": "127.0.0.1 - - 28/Sep/2016:15:26:09 +1000 \"PUT /libs/sling/topology/connector.4c70ca83-7cfe-42a3-975e-6e815ed371d3.json HTTP/1.1\" 200 163 \"-\" \"Apache-HttpClient/4.3.4 (java 1.5)\""
+        }, {
+            "line": "172.18.0.1 - admin 28/Sep/2016:15:12:16 +1000 \"GET /libs/granite/csrf/token.json HTTP/1.1\" 200 103 \"http://localhost:4502/crx/de/index.jsp\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36\""
+        }]
+    }
+}

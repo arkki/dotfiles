@@ -1,0 +1,33 @@
+{
+    "alfresco": {
+        "title": "Alfresco log",
+        "description": "Alfresco log format",
+        "url": "",
+        "regex": {
+            "alfresco": {
+                "pattern": "^(?<timestamp>\\d{2}:\\d{2}:\\d{2},\\d{3})\\s+(?<alert_level>\\w+)\\s+\\[(?<module>[\\w\\d\\s_:=\\-\\/\\.\\[\\]\\(\\)]+)\\]\\s+(?<body>.*)$"
+            }
+        },
+        "timestamp-format": ["%H:%M:%S,%L"],
+        "value": {
+            "alert_level": {
+                "kind": "string",
+                "identifier": true
+            },
+            "module": {
+                "kind": "string",
+                "identifier": true
+            },
+            "body": {
+                "kind": "string"
+            }
+        },
+        "sample": [{
+            "line": "10:17:57,340 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 268 Web Scripts (+0 failed), 278 URLs"
+        }, {
+            "line": "10:17:57,341 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] Registered 8 Package Description Documents (+0 failed)"
+        }, {
+            "line": "10:17:57,499 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] Initialised Spring Surf Container Web Script Container (in 918.59796ms)"
+        }]
+    }
+}

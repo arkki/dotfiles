@@ -1,0 +1,49 @@
+{
+	"yja_catalina_log" : {
+		"title"			: "YJA catalina log format",
+		"description"	: "Log format used by YJA catalina",
+		"url"			: "http://catalina",
+		"regex" : {
+			"main"	: {
+				"pattern" : "^(?<timestamp>\\d{4}[-]\\d{2}[-]\\d{2} \\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?) (?<alert_level>\\w+)\\s{1,2}\\[(?<process>[\\w\\/_-]+)\\]\\[(?<class>[\\w:._]+)?\\](?:- )?(?<body>.*)$"
+
+			}
+		},
+
+    "level-field": "alert_level",
+
+
+    "level": {
+      "info": "STATUS",
+      "error": "ERROR",
+      "warning": "WARN",
+      "debug": "DEBUG",
+      "info": "INFO"
+    },
+
+
+		"value" : {
+      "alert_level": { "kind": "string", "identifier": true },
+      "process"    : { "kind" : "string", "identifier" : true },
+      "class"		: { "kind" : "string", "identifier" : true },
+			"exception"	: { "kind" : "string", "identifier" : true },
+			"body"		: { "kind" : "string" }
+		},
+		"timestamp-format" : [ 
+			"%Y-%m-%d %H:%M:%S.%L"
+		],
+		"sample" : [
+      {
+        "line" : "2024-05-13 16:34:01.396 INFO  [liferay/scheduler_dispatch-5][NewsFeedEpressiUpdaterImpl:247] Checking ePressi Feeds - ePressi subscriptions: 1 - [ GroupId: 25230764, SubscriptionUrl: 'https://www.epressi.com/feeds/liikennevirasto.xml', Fetched items: 0, ArticleIds: [ ] - FailureRate: 0],"
+      },
+      {
+        "line" : "2024-05-13 16:47:02.003 WARN  [liferay/scheduler_dispatch-58][MailAlertSenderService:268] Could not send email notifications for mail alert 595450"},
+      {
+        "line": "2024-05-30 10:24:24.754 INFO  [main][DefaultStageService:49] DefaultStageService.create()"
+      },
+      {
+        "line": "2024-05-30 10:34:00.817 ERROR [liferay/scheduler_dispatch-3][EpressiXpathParser:68] null"
+      }
+		]
+	}
+}
