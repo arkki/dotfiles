@@ -58,13 +58,20 @@ M.nvimtree = {
   filters = {
     dotfiles = false,
   },
+  view = {
+    adaptive_size = true,
+  },
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    }
+  }
 }
 
 M.cmp = {
 -- vim.opt.completeopt = "menu,menuone,noselect,noinsert"
   -- preselect = cmp.PreselectMode.None,
   sources = {
-     { name = "copilot" },
      { name = "nvim_lsp" },
      { name = "luasnip" },
      { name = "buffer" },

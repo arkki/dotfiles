@@ -65,11 +65,6 @@ local plugins = {
     "mhartington/formatter.nvim"
   },
 
-  {
-    "github/copilot.vim",
-    lazy = false
-  },
-
   -- override plugin configs
   {
     "williamboman/mason.nvim",

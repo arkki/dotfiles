@@ -1,7 +1,3 @@
-import = [
-  "~/.config/alacritty/themes/themes/solarized_dark.toml",
-  # "~/.config/alacritty/themes/themes/rose-pine.toml"
-]
 [window]
 option_as_alt = "Both"
 
@@ -26,3 +22,15 @@ style = "Regular"
 
 [keyboard]
 # bindings = [{ key = "Enter", mods = "Control", chars = "\u000A" }]
+bindings = [
+  # { key = "Right", mods = "Command", chars = "\u01bf" },
+]
+
+[env]
+TERM = "xterm-256color"
+
+[general]
+import = [
+  "~/.config/alacritty/themes/themes/solarized_dark.toml",
+  # "~/.config/alacritty/themes/themes/rose-pine.toml"
+]

@@ -17,8 +17,14 @@ M.general = {
 
     ["<D-s>"] = {"<CMD>w<CR><ESC>", "Save file" },
     ["<leader>s"] = {"<CMD>w<CR><ESC>", "Save file" },
-
     ["<leader>js"] = {"<CMD>w !node<CR>", "Run buffer in node"},
+
+
+    ["<S-h>"] = {"<S-h>zz", opts = { silent = true }},
+    ["<S-l>"] = {"<S-l>zz", opts = { silent = true }},
+    ["<C-d>"] = {"<C-d>zz", opts = { silent = true }},
+    ["<C-u>"] = {"<C-u>zz", opts = { silent = true }},
+
     -- ["<C-h>"] = { "NvimTmuxNavigateLeft" },
     -- ["<C-l>"] = { "NvimTmuxNavigateRight" },
     -- ["<C-k>"] = { "NvimTmuxNavigateUp" }
@@ -38,10 +44,6 @@ M.general = {
   t = {
     ["<leader><Esc>"] = { "<C-\\><C-n>", "Exit terminal mode"},
   },
-  i = {
-    ["<C-Enter>"] = {"copilot#Accept('<CR>')", opts = { noremap = true, silent = true, expr = true, replace_keycodes = false }},
-    -- ["<C-Enter>"] = {"copilot#Accept('<CR>')", opts = { silent = true }},
-  }
 }
 
 -- more keybinds!

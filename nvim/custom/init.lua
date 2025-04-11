@@ -13,4 +13,4 @@ vim.wo.relativenumber = true
 
 require("custom.configs.rust")
 
-require("custom.configs.copilot")
+vim.g.zig_fmt_autosave = 0

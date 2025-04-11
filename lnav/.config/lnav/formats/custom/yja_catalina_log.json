@@ -5,7 +5,7 @@
 		"url"			: "http://catalina",
 		"regex" : {
 			"main"	: {
-				"pattern" : "^(?<timestamp>\\d{4}[-]\\d{2}[-]\\d{2} \\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?) (?<alert_level>\\w+)\\s{1,2}\\[(?<process>[\\w\\/_-]+)\\]\\[(?<class>[\\w:._]+)?\\](?:- )?(?<body>.*)$"
+				"pattern" : "^(?<timestamp>\\d{4}[-]\\d{2}[-]\\d{2} \\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?) (?<alert_level>\\w+)\\s{1,2}\\[(?<process>[^\\]]+)\\]\\[(?<class>[\\w:._]+)?\\](?:- )?(?<body>.*)$"
 
 			}
 		},
@@ -43,6 +43,9 @@
       },
       {
         "line": "2024-05-30 10:34:00.817 ERROR [liferay/scheduler_dispatch-3][EpressiXpathParser:68] null"
+      },
+      {
+        "line": "2024-05-31 12:36:21.714 INFO  [Start Level: Equinox Container: 1154cf4b-a756-4e9a-8a6b-826514d8f579][Policy:223] Attempting to load AntiSamy policy from an input stream."
       }
 		]
 	}

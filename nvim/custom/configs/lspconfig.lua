@@ -37,6 +37,15 @@ lspconfig.gopls.setup {
   },
 }
 
+lspconfig.zls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = {"zls"},
+  filetypes = { "zig", "zon" },
+  root_dir = util.root_pattern("zls.json", "build.zig", ".git")
+}
+
+
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
