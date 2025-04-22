@@ -1,3 +1,5 @@
+package foreign-env
+package sdk
 package vcs
 theme budspencer
 theme chain
