@@ -4,8 +4,8 @@ abbr df 'df -tH'
 abbr di 'docker inspect'
 abbr finder 'open -a Finder'
 abbr dimgs 'docker images'
-abbr dc docker-compose
-abbr dm docker-machine
+abbr dc docker compose
+abbr dm docker machine
 abbr gh 'git hist'
 abbr gdt 'git difftool'
 abbr dn 'docker network'
@@ -24,10 +24,10 @@ abbr devbox-edit 'docker run -it --name devbox --hostname devbox-edit.localhost 
 abbr dexec 'docker exec -it -u root'
 
 
-abbr dcps 'docker-compose ps'
+abbr dcps 'docker compose ps'
 abbr bef 'bundle exec fastlane'
 abbr dud 'du -h -d 1 | gsort -h | less'
-abbr dclogs 'docker-compose logs -f -t --no-color | lnav'
+abbr dclogs 'docker compose logs -f -t --no-color | lnav'
 abbr kc kubectl
 abbr mp multipass
 
