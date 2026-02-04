@@ -1,6 +1,8 @@
 # Env variables
-set -x EDITOR nvim
-set -x SHELL (which fish) 
+# set -x EDITOR nvim
+# set -x SHELL (which fish) 
+
+# set -gx TERM xterm-256color
 
 # LOCALE
 set -x LANG en_US.UTF-8
