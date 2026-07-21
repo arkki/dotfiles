@@ -13,6 +13,7 @@ fish/.config/fish/completions/docker.fish
 vim/.vim/.netrwhist
 
 lnav/.lnav/*
+lnav/.config/lnav/*
 !lnav/.lnav/formats
 
 tmux/.config/tmux/plugins
