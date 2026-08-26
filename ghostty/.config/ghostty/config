@@ -1,0 +1,27 @@
+# PRE-RELEASE
+# auto-update-channel = tip
+
+theme = Selenized Dark
+
+# required for zellij
+macos-option-as-alt = true
+
+# quick open terminal with cmd+ctrl+`
+# keybind = global:cmd+ctrl+grave_accent=toggle_quick_terminal
+# keybind = global:cmd+backquote=toggle_quick_terminal
+# keybind = global:ctrl+escape=toggle_quick_terminal
+# keybind = global:cmd+grave_accent=toggle_quick_terminal
+
+# make windows full always
+quick-terminal-size = 100%
+quick-terminal-autohide = false
+
+# alt+backspace deletes a word
+keybind = alt+backspace=text:\x17
+
+# alt+right opens zellij floating otherwise
+# keybind = alt+left=unbind
+# keybind = alt+right=unbind
+
+# always confirm close
+confirm-close-surface = always

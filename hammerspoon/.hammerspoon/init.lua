@@ -1,0 +1,56 @@
+-- hs.loadSpoon("AClock")
+-- hs.hotkey.bind({"cmd"}, "F1", function()
+--   spoon.AClock:toggleShow()
+-- end)
+--
+hs.hotkey.bind({"cmd"}, "F1", function()
+  hs.application.launchOrFocus("Slack")
+end)
+hs.hotkey.bind({"cmd"}, "F2", function()
+  hs.application.launchOrFocus("Google Chrome")
+end)
+hs.hotkey.bind({"cmd"}, "F3", function()
+  hs.application.launchOrFocus("Brave Browser")
+end)
+hs.hotkey.bind({"cmd"}, "F4", function()
+  hs.application.launchOrFocus("IntelliJ IDEA")
+end)
+hs.hotkey.bind({"cmd"}, "F5", function()
+  hs.application.launchOrFocus("Microsoft Outlook")
+end)
+hs.hotkey.bind({"cmd"}, "F6", function()
+  hs.application.launchOrFocus("Microsoft Teams")
+end)
+hs.hotkey.bind({"cmd"}, "F7", function()
+  hs.application.launchOrFocus("Microsoft Outlook")
+end)
+hs.hotkey.bind({"cmd"}, "F8", function()
+  hs.application.launchOrFocus("Microsoft Outlook")
+end)
+hs.hotkey.bind({"cmd"}, "F9", function()
+  hs.application.launchOrFocus("Microsoft Outlook")
+end)
+hs.hotkey.bind({"cmd"}, "F10", function()
+  hs.application.launchOrFocus("LogSeq")
+end)
+hs.hotkey.bind({"cmd"}, "F11", function()
+  hs.application.launchOrFocus("KeePassXC")
+end)
+hs.hotkey.bind({"cmd"}, "F12", function()
+  hs.application.launchOrFocus("Spotify")
+end)
+
+hs.hotkey.bind({"cmd"}, "`", function()
+    local app = hs.application.get("com.mitchellh.ghostty")
+
+    if not app then
+        hs.application.launchOrFocusByBundleID("com.mitchellh.ghostty")
+        return
+    end
+
+    if app:isFrontmost() then
+        app:hide()
+    else
+        app:activate(true)
+    end
+end)

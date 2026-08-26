@@ -3,8 +3,6 @@
 #	source $file
 # end
 
-# status --is-interactive; and source (jenv init -|psub)
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Added by OrbStack: command-line tools and integration
